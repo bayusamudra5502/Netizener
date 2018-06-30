@@ -30,3 +30,4 @@ Yang harus kita kerjakan:
 2. Tabel Akses
 3. Tabel Bookmark
 4. Tabel Blacklist
+
