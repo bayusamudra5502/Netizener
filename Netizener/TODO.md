@@ -1,7 +1,7 @@
-﻿#TO DO LIST
+# TO DO LIST
 Yang harus kita kerjakan:
 
-## A. Form yang harus dibuat
+### A. Form yang harus dibuat
 1. Form Login - Akses Login Siapa yg bisa pakai browser ini
 2. Form Downloads - Untuk list download
 3. Form Contibutors - Kumpulan nama yang ikut dalam pengembangan aplikasi ini
@@ -14,7 +14,7 @@ Yang harus kita kerjakan:
 10. Form Downloader - Pengunduh...
 ...
 
-## B. Library yang harus dibuat
+### B. Library yang harus dibuat
 1. Kumpulan variable (Kelas Variabel)
 2. CEFSharp Download Handler (Kelas Downloader Implement IDownload)
    Lihat : https://github.com/cefsharp/CefSharp/blob/master/CefSharp.Example/DownloadHandler.cs
@@ -27,13 +27,13 @@ Yang harus kita kerjakan:
 9. Kelas Dialog - Javascript Dialog Handler
 10. Kelas Load - Menangani Loading
 
-## C. Database (SQLite)
+### C. Database (SQLite)
 1. Tabel Pengguna
 2. Tabel Akses
 3. Tabel Bookmark
 4. Tabel Blacklist
 
-## D. USEFUL LINKS
+### D. USEFUL LINKS
 https://github.com/cefsharp/CefSharp/blob/master/CefSharp.WinForms.Example/BrowserTabUserControl.cs
 https://stackoverflow.com/questions/41748935/issue-avoiding-js-alert-in-cefsharp-browser
 https://github.com/cefsharp/CefSharp/blob/master/CefSharp/Handler/IJsDialogHandler.cs
