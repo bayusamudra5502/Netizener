@@ -37,3 +37,6 @@ Yang harus kita kerjakan:
 https://github.com/cefsharp/CefSharp/blob/master/CefSharp.WinForms.Example/BrowserTabUserControl.cs
 https://stackoverflow.com/questions/41748935/issue-avoiding-js-alert-in-cefsharp-browser
 https://github.com/cefsharp/CefSharp/blob/master/CefSharp/Handler/IJsDialogHandler.cs
+
+### E. Absen
+3. Ikhsan
