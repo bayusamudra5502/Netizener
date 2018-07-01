@@ -39,4 +39,5 @@ https://stackoverflow.com/questions/41748935/issue-avoiding-js-alert-in-cefsharp
 https://github.com/cefsharp/CefSharp/blob/master/CefSharp/Handler/IJsDialogHandler.cs
 
 ### E. Absen
+1. Fauzi
 3. Ikhsan
