@@ -22,9 +22,9 @@ Yang harus kita kerjakan:
 4. Kelas Register - Mengatur alur pendaftaran
 5. Kelas Bookmark - Mengatur Penambahan Bookmark
 6. Kelas Download - Mengatur alir Download
-7. Kelas Sinkronisasi - Mengatur sinkronisasi
+7. Kelas Sinkronisasi - Mengatur sinkronisasi 'Batal
 8. Kelas Database - Untuk melakukan segala transaksi dgn SQLite
-9. Kelas Dialog - Javascript Dialog Handler
+9. Kelas Dialog Implement IJsDialogHandler - Javascript Dialog Handler
 10. Kelas Load - Menangani Loading
 
 ## C. Database (SQLite)
