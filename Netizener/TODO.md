@@ -43,4 +43,5 @@ Yang harus kita kerjakan:
 
 ### E. Absen
 1. Fauzi
+2. Fadhil
 3. Ikhsan
