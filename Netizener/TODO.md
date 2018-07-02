@@ -34,9 +34,12 @@ Yang harus kita kerjakan:
 4. Tabel Blacklist
 
 ### D. USEFUL LINKS
-https://github.com/cefsharp/CefSharp/blob/master/CefSharp.WinForms.Example/BrowserTabUserControl.cs
-https://stackoverflow.com/questions/41748935/issue-avoiding-js-alert-in-cefsharp-browser
-https://github.com/cefsharp/CefSharp/blob/master/CefSharp/Handler/IJsDialogHandler.cs
+- https://github.com/cefsharp/CefSharp/blob/master/CefSharp.WinForms.Example/BrowserTabUserControl.cs
+- https://stackoverflow.com/questions/41748935/issue-avoiding-js-alert-in-cefsharp-browser
+- https://github.com/cefsharp/CefSharp/blob/master/CefSharp/Handler/IJsDialogHandler.cs
+- https://mahapps.com/guides/quick-start.html
+- http://converter.telerik.com/?utm_medium=product&utm_source=converter&utm_campaign=verA
+
 
 ### E. Absen
 1. Fauzi
