@@ -153,6 +153,14 @@
       <DependentUpon>About.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Account_Form.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login_Form.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resources\Icons.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -182,6 +190,7 @@
     <Import Include="System.Windows.Navigation" />
   </ItemGroup>
   <ItemGroup>
+
     <Compile Include="Database\Database.vb" />
     <Compile Include="System\ErrorHandler.vb" />
     <Compile Include="Interfaces\IBlacklist.vb" />
@@ -194,6 +203,7 @@
     <Compile Include="Interfaces\ILogin.vb" />
     <Compile Include="Interfaces\IRegister.vb" />
     <Compile Include="Interfaces\IVariable.vb" />
+
     <Compile Include="My Project\AssemblyInfo.vb">
       <SubType>Code</SubType>
     </Compile>
@@ -242,6 +252,7 @@
     <None Include="TODO.md" />
   </ItemGroup>
   <ItemGroup />
+
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
