@@ -1,0 +1,20 @@
+﻿<Window x:Class="Login_Form"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Netizeners"
+        mc:Ignorable="d"
+        Title="Login_Form" Height="376" MaxHeight="376" Width="383"
+        MaxWidth="383" MinHeight="376" MinWidth="383">
+    <Grid Background="#FF57F0E2">
+        <TextBox x:Name="Username" HorizontalAlignment="Left" Height="23" Margin="124,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="124,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" Tag="*"/>
+        <Label Content="Username" HorizontalAlignment="Left" Height="26" Margin="27,206,0,0" VerticalAlignment="Top" Width="92"/>
+        <Label Content="Password" HorizontalAlignment="Left" Height="26" Margin="27,251,0,0" VerticalAlignment="Top" Width="92"/>
+        <Button x:Name="Login" Content="Login" HorizontalAlignment="Left" Height="27" Margin="246,297,0,0" VerticalAlignment="Top" Width="89"/>
+        <Image HorizontalAlignment="Left" Height="171" Margin="91,16,0,0" VerticalAlignment="Top" Width="180" />
+        <!--Source="user-icon-png-pnglogocom.png"-->
+
+    </Grid>
+</Window>
