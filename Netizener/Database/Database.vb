@@ -137,4 +137,5 @@ Public Class Database(Of T)
 		Return hasil
 	End Function
 #End Region
+
 End Class
