@@ -61,12 +61,65 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Error Message Description
+        '''
+        '''// Sabar ini ujian bro.. :v
+        '''
+        '''Date 	: {0}
+        '''Time 	: {1}
+        '''Version : {2}
+        '''
+        '''Description :
+        '''{3}
+        '''
+        '''Exception.String() :
+        '''{4}.
+        '''</summary>
+        Friend ReadOnly Property ErrorFormat() As String
+            Get
+                Return ResourceManager.GetString("ErrorFormat", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Terjadi kesalahan saat operasi dilakukan.
+        '''
+        '''Pesan :
+        '''{0}.
+        '''</summary>
+        Friend ReadOnly Property ErrorFormatDialog() As String
+            Get
+                Return ResourceManager.GetString("ErrorFormatDialog", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property Icon() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Icon", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to .
+        '''</summary>
+        Friend ReadOnly Property LocationFormat() As String
+            Get
+                Return ResourceManager.GetString("LocationFormat", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Pesan :
+        '''{0}
+        '''.
+        '''</summary>
+        Friend ReadOnly Property MessageFormat() As String
+            Get
+                Return ResourceManager.GetString("MessageFormat", resourceCulture)
             End Get
         End Property
     End Module

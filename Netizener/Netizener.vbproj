@@ -137,22 +137,19 @@
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="Application.xaml">
+    <ApplicationDefinition Include="System\Application.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="About.xaml">
+    <Page Include="AboutMe\About.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Account_Form.xaml.vb">
-      <DependentUpon>Account_Form.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Application.xaml.vb">
+    <Compile Include="System\Application.xaml.vb">
       <DependentUpon>Application.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="About.xaml.vb">
+    <Compile Include="AboutMe\About.xaml.vb">
       <DependentUpon>About.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -193,9 +190,20 @@
     <Import Include="System.Windows.Navigation" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Login_Form.xaml.vb">
-      <DependentUpon>Login_Form.xaml</DependentUpon>
-    </Compile>
+
+    <Compile Include="Database\Database.vb" />
+    <Compile Include="System\ErrorHandler.vb" />
+    <Compile Include="Interfaces\IBlacklist.vb" />
+    <Compile Include="Interfaces\IBookmark.vb" />
+    <Compile Include="Interfaces\IDatabase.vb" />
+    <Compile Include="Interfaces\IDialog.vb" />
+    <Compile Include="Interfaces\IDownload.vb" />
+    <Compile Include="Interfaces\IDownloader.vb" />
+    <Compile Include="Interfaces\IErrorHandler.vb" />
+    <Compile Include="Interfaces\ILogin.vb" />
+    <Compile Include="Interfaces\IRegister.vb" />
+    <Compile Include="Interfaces\IVariable.vb" />
+
     <Compile Include="My Project\AssemblyInfo.vb">
       <SubType>Code</SubType>
     </Compile>
@@ -243,9 +251,8 @@
   <ItemGroup>
     <None Include="TODO.md" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="user-icon-png-pnglogocom.png" />
-  </ItemGroup>
+  <ItemGroup />
+
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
