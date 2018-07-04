@@ -1,0 +1,29 @@
+﻿<Window x:Class="Contributor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Netizeners"
+        mc:Ignorable="d"
+        Title="Contributor" Height="282.022" Width="443.968">
+    <Grid Margin="0,0,2,-2">
+        <Label Content="Contributor" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Image HorizontalAlignment="Left" Height="50" Margin="10,49,0,0" VerticalAlignment="Top" Width="50" Source="BayuSamudra5502.png"/>
+        <Image HorizontalAlignment="Left" Height="50" Margin="10,104,0,0" VerticalAlignment="Top" Width="50" Source="Fadhil.jpg"/>
+        <Image HorizontalAlignment="Left" Height="50" Margin="10,159,0,0" VerticalAlignment="Top" Width="50" Source="test.png"/>
+        <Image HorizontalAlignment="Left" Height="50" Margin="225,49,0,0" VerticalAlignment="Top" Width="50" Source="lunarpatch1st.jpg"/>
+        <Image HorizontalAlignment="Left" Height="50" Margin="225,104,0,0" VerticalAlignment="Top" Width="50" Source="hana.png"/>
+        <Label Content="Bayu Samudra" HorizontalAlignment="Left" Margin="65,49,0,0" VerticalAlignment="Top"/>
+        <Label Content="bayusamudra5502" HorizontalAlignment="Left" Margin="65,73,0,0" VerticalAlignment="Top"/>
+        <Label Content="Fadhillah Akmal" HorizontalAlignment="Left" Margin="65,104,0,0" VerticalAlignment="Top"/>
+        <Label Content="EpicNyan" HorizontalAlignment="Left" Margin="65,128,0,0" VerticalAlignment="Top"/>
+        <Label Content="fauziaminuddin" HorizontalAlignment="Left" Margin="65,183,0,0" VerticalAlignment="Top"/>
+        <Label Content="Fauzi Aminuddin" HorizontalAlignment="Left" Margin="65,159,0,0" VerticalAlignment="Top"/>
+        <Label Content="Muhammad Ikhsan" HorizontalAlignment="Left" Margin="280,49,0,0" VerticalAlignment="Top"/>
+        <Label Content="LunarPatch1St" HorizontalAlignment="Left" Margin="280,75,0,0" VerticalAlignment="Top"/>
+        <Label Content="Hana Fathiyah" HorizontalAlignment="Left" Margin="280,104,0,0" VerticalAlignment="Top"/>
+        <Label Content="hanafathiyah" HorizontalAlignment="Left" Margin="280,128,0,0" VerticalAlignment="Top"/>
+        <Button Content="OK" HorizontalAlignment="Left" Margin="349,216,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>
