@@ -141,6 +141,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Download.xaml.vb">
+      <DependentUpon>Download.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Downloader.xaml.vb">
+      <DependentUpon>Downloader.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window1.xaml.vb">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Contributor.xaml.vb">
+      <DependentUpon>Contributor.xaml</DependentUpon>
+    </Compile>
     <Page Include="AboutMe\About.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -165,6 +177,14 @@
     <Compile Include="Login\Login_Form.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Compile>
+    <Page Include="Download.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Downloader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resources\Icons.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -172,6 +192,14 @@
     <Page Include="Resources\IconsNonShared.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Contributor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -253,7 +281,21 @@
   <ItemGroup>
     <None Include="TODO.md" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Fadhil.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BayuSamudra5502.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="lunarpatch1st.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="hana.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
