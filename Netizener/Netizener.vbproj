@@ -141,47 +141,49 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Download.xaml.vb">
+    <Compile Include="Account\Account.xaml.vb">
+      <DependentUpon>Account.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Bookmark\FrmBookmark.xaml.vb">
+      <DependentUpon>FrmBookmark.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Download\Download.xaml.vb">
       <DependentUpon>Download.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Downloader.xaml.vb">
+    <Compile Include="Download\Downloader.xaml.vb">
       <DependentUpon>Downloader.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Window1.xaml.vb">
-      <DependentUpon>Window1.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Contributor.xaml.vb">
+    <Compile Include="About\Contributor.xaml.vb">
       <DependentUpon>Contributor.xaml</DependentUpon>
     </Compile>
-    <Page Include="AboutMe\About.xaml">
+    <Compile Include="System\Settings\Settings.xaml.vb">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Page Include="About\About.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Account\Account_Form.xaml.vb">
-      <DependentUpon>Account_Form.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Login\Login_Form.xaml.vb">
-      <DependentUpon>Login_Form.xaml</DependentUpon>
-    </Compile>
     <Compile Include="System\Application.xaml.vb">
       <DependentUpon>Application.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AboutMe\About.xaml.vb">
+    <Compile Include="About\About.xaml.vb">
       <DependentUpon>About.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Account\Account_Form.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Compile>
-    <Compile Include="Login\Login_Form.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Compile>
-    <Page Include="Download.xaml">
+    <Page Include="Account\Account.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Downloader.xaml">
+    <Page Include="Bookmark\FrmBookmark.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Download\Download.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Download\Downloader.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -193,11 +195,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Window1.xaml">
+    <Page Include="About\Contributor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Contributor.xaml">
+    <Page Include="System\Settings\Settings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -256,6 +258,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
     </EmbeddedResource>
+    <None Include="database.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
@@ -265,9 +270,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Image1.bmp" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\paper-plane.png" />
@@ -282,19 +284,25 @@
     <None Include="TODO.md" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Fadhil.jpg" />
+    <Resource Include="Resources\Fadhil.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="BayuSamudra5502.png" />
+    <Resource Include="Resources\BayuSamudra5502.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="lunarpatch1st.jpg" />
+    <Resource Include="Resources\lunarpatch1st.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="test.png" />
+    <Resource Include="Resources\test.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="hana.png" />
+    <Resource Include="Resources\hana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Login\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\boy.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

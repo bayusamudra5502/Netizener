@@ -7,14 +7,20 @@ Public Interface IVariable
 
 	''' <summary>
 	''' Digunakan untuk menyimpan connectionString.
-	''' Contoh : "Data Source=database.db;Version=3;"
+	''' Contoh : "Data Source=database.db;"
 	''' </summary>
 	''' <returns>String : Koneksi string.</returns>
-	ReadOnly Property connectionString As String
+	ReadOnly Property ConnectionString As String
 
 	''' <summary>
 	''' Digunakan untuk menyimpan username saat login.
 	''' </summary>
-	''' <returns></returns>
+	''' <returns>Username</returns>
 	ReadOnly Property Username As String
+
+	''' <summary>
+	''' Properti Lokasi penyimpanan Database
+	''' </summary>
+	''' <returns>Lokasi Database</returns>
+	ReadOnly Property DatabaseLocation As String
 End Interface
