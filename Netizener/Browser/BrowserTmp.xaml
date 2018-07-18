@@ -1,4 +1,4 @@
-﻿<Window x:Class="BrowserTmp"
+﻿<Page x:Class="BrowserTmp"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -75,4 +75,4 @@
         <CEFSharp:ChromiumWebBrowser Name="Browser" Loaded="Browser_Loaded" LoadError="Browser_LoadError" LoadingStateChanged="Browser_LoadingStateChanged" FrameLoadEnd="Browser_FrameLoadEnd">
         </CEFSharp:ChromiumWebBrowser>
     </DockPanel>
-</Window>
+</Page>

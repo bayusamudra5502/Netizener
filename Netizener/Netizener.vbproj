@@ -154,6 +154,9 @@
     <Compile Include="Browser\BrowserTmp.xaml.vb">
       <DependentUpon>BrowserTmp.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Browser\MainWindow.xaml.vb">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Configuration\Module.vb" />
     <Compile Include="System\LoadHandler.vb" />
     <None Include="Configuration\Examples\Configuration.vb" />
@@ -197,6 +200,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Browser\BrowserTmp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Browser\MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
