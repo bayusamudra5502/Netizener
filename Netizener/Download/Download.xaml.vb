@@ -1,3 +1,3 @@
-﻿Public Class Download
+﻿Public Class FrmDownload
 
 End Class

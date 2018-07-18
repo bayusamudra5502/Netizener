@@ -1,0 +1,40 @@
+﻿<Controls:MetroWindow x:Class="DownloadViewer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Netizeners"
+        mc:Ignorable="d"
+        Title="Download" Height="250" Width="675" ResizeMode="NoResize">
+    <Grid>
+        <Button Content="Download" HorizontalAlignment="Left" Margin="528,169,0,0" VerticalAlignment="Top" Width="111" Height="36"/>
+        <Image HorizontalAlignment="Left" Height="126" Margin="31,34,0,0" VerticalAlignment="Top" Width="126"/>
+        <Label FontSize="13" Content="File Name" HorizontalAlignment="Left" Margin="172,45,0,0" VerticalAlignment="Top"/>
+        <Label FontSize="13" Content="Source" HorizontalAlignment="Left" Margin="172,69,0,0" VerticalAlignment="Top"/>
+        <Label FontSize="13" Content="Save Path" HorizontalAlignment="Left" Margin="172,95,0,0" VerticalAlignment="Top"/>
+        <TextBlock Name="Size" FontSize="13" TextAlignment="Center" Text="0 Byte" HorizontalAlignment="Left" Margin="31,170,0,0" VerticalAlignment="Top" Width="126"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="412,169,0,0" VerticalAlignment="Top" Width="111" Height="36" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.5"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <TextBox Name="SavePath" FontSize="13" Text="Save Path" HorizontalAlignment="Left" Margin="261,95,0,0" VerticalAlignment="Top" Width="378"/>
+        <Label Name="Source" FontSize="13" Content="Unknown" HorizontalAlignment="Left" Margin="261,69,0,0" VerticalAlignment="Top" Width="378"/>
+        <Label Name="FileName" FontSize="13" Content="Unknown" HorizontalAlignment="Left" Margin="261,45,0,0" VerticalAlignment="Top" Width="378"/>
+        <ComboBox HorizontalAlignment="Left" SelectedIndex="0" Height="25" Margin="261,127,0,0" VerticalAlignment="Top" Width="378">
+            <ComboBoxItem Content="Download File Only"/>
+            <ComboBoxItem Content="Download and Open File"/>
+            <ComboBoxItem Content="Open File Without Saving"/>
+            <ComboBoxItem Content="#ADD" Visibility="Collapsed" />
+        </ComboBox>
+        <Label FontSize="13" Content="Action" HorizontalAlignment="Left" Margin="172,127,0,0" VerticalAlignment="Top"/>
+
+
+    </Grid>
+</Controls:MetroWindow>

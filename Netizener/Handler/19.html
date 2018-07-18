@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link href="inc/bootstrap.min.css" rel="stylesheet">
+        <script src="inc/jquery-3.3.1.min.js"></script>
+        <script src="inc/bootstrap.min.js"></script>
+        <script>
+        function GetURLParameter(sParam)
+            {
+                var sPageURL = window.location.search.substring(1);
+                var sURLVariables = sPageURL.split('&');
+                for (var i = 0; i < sURLVariables.length; i++) 
+                {
+                    var sParameterName = sURLVariables[i].split('=');
+                    if (sParameterName[0] == sParam) 
+                    {
+                        return sParameterName[1];
+                    }
+                }
+            };
+
+            $(window).ready(function() {
+               $("#div1").fadeIn(500);
+               $("#name").text(GetURLParameter('file'));
+
+                document.addEventListener('contextmenu', event => event.preventDefault());
+            });
+            
+    
+        </script>
+        <style>
+        @media only screen and (max-width: 780px) {
+            .image{
+                display: none;
+            }
+        }
+
+        .vertical-center {
+            min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+            min-height: 100vh; /* These two lines are counted as one :-)       */
+
+            display: flex;
+            align-items: center;
+        }
+        body{
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+        </style>
+        <title>File Virus Detected</title>
+    </head>
+    <body style="background-color: whitesmoke">
+        <div class="vertical-center">
+            <div id="div1" class="container" style="font-size: 12pt;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;display: none;">
+                <div class="row justify-content-md-center align-items-center" style="margin:auto;">
+                    <div class="col-md-auto">
+                         <img class="image" src="inc/002-bug.png" style="max-width: 100px;max-height: auto;"/>
+                    </div>
+                    <div class="col-md-auto">
+                            <h1 class="mt-0" style="font-size: 15pt;">File Virus Infected</h1>
+                            <p>
+                                We have detected that this page contains a virus. Due to security reason, <br> this page isn't be loaded.
+                            </p>
+                                            
+                            <p id="div2" style="font-size: 11pt">I know the risk of this document. I want to <a id="open" href="#" data-toggle="modal" data-target="#expert">open developer mode</a>.</p>
+                            
+                            <p><button type="button" class="btn btn-outline-dark" onclick="">Go Back</button></p>
+                            
+                            <div id="expert" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="ExpetModeTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="TitleModal">Developer Mode</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="alert alert-danger" role="alert" >
+                                                <strong>NOTE :</strong>
+                                                <p>This page may be harming your computer. Please be careful.</p>
+                                            </div>
+                                            <p>Do you want to load this page anyway? Load it at your own risk.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" onclick="NetizenerErrorHandler.RunAnywayVirus();">Yes, I want to load it</button>
+                                            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">No</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p style="color:slategray;font-size: 11pt;">Netizener Error (19) : <i>CONTAINS_VIRUS</i></p>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </body>
+</html>

@@ -54,6 +54,7 @@ Public Interface IDownload
 		IsDownloading = 1
 		Failed = 2
 		Cancelled = 3
+		BeginDownload = 4
 	End Enum
 
 	''' <summary>
@@ -70,11 +71,11 @@ Public Interface IDownload
 	''' <returns>Menghasilkan True kalo berhasil</returns>
 	Function SetStatus(ByVal ID As Integer, ByVal Status As Integer) As Task(Of Boolean)
 
-	''' <summary>
-	''' Fungsi untuk ngasilin dataset yang berguna kalo mau tampilin data.
-	''' </summary>
-	''' <returns>Dataset tabel 'Download'</returns>
-	Function GetDownloadedDataSet() As Task(Of DataSet)
+	'''' <summary>
+	'''' Fungsi untuk ngasilin dataset yang berguna kalo mau tampilin data.
+	'''' </summary>
+	'''' <returns>Dataset tabel 'Download'</returns>
+	'Function GetDownloadedDataSet() As Task(Of DataSet)
 
 	''' <summary>
 	''' Fungsi menghapus semua data Download

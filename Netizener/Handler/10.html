@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link href="inc/bootstrap.min.css" rel="stylesheet">
+        <script src="inc/jquery-3.3.1.min.js"></script>
+        <script src="inc/bootstrap.min.js"></script>
+        <script>
+        function GetURLParameter(sParam)
+            {
+                var sPageURL = window.location.search.substring(1);
+                var sURLVariables = sPageURL.split('&');
+                for (var i = 0; i < sURLVariables.length; i++) 
+                {
+                    var sParameterName = sURLVariables[i].split('=');
+                    if (sParameterName[0] == sParam) 
+                    {
+                        return sParameterName[1];
+                    }
+                }
+            };
+
+            $(window).ready(function() {
+               $("#div1").fadeIn(500);
+
+                document.addEventListener('contextmenu', event => event.preventDefault());
+            });
+            
+    
+        </script>
+        <style>
+        @media only screen and (max-width: 780px) {
+            .image{
+                display: none;
+            }
+        }
+
+        .vertical-center {
+            min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+            min-height: 100vh; /* These two lines are counted as one :-)       */
+
+            display: flex;
+            align-items: center;
+        }
+        body{
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+        </style>
+        <title>Access Denied</title>
+    </head>
+    <body style="background-color: whitesmoke">
+        <div class="vertical-center">
+            <div id="div1" class="container" style="font-size: 12pt;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;display: none;">
+                <div class="row justify-content-md-center align-items-center" style="margin:auto;">
+                    <div class="col-md-auto">
+                         <img class="image" src="inc/no-entry.png" style="max-width: 100px;max-height: auto;"/>
+                    </div>
+                    <div class="col-md-auto">
+                            <h1 class="mt-0" style="font-size: 15pt;">Access Denied</h1>
+                            <p>
+                                You don't have access to open this page. Please contact your administrator<br> to grant access.
+                            </p>
+                            <p><button type="button" class="btn btn-outline-dark" onclick="NetizenerErrorHandler.Back();">Go Back</button></p>
+                            
+                            <p style="color:slategray;font-size: 11pt;">Netizener Error (10) : <i>ACCESS_DENIED</i></p>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </body>
+</html>

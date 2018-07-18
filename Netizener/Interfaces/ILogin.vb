@@ -1,4 +1,5 @@
-﻿''' <summary>
+﻿Imports Netizeners
+''' <summary>
 ''' Interface yang menangani proses login
 ''' </summary>
 Public Interface ILogin
@@ -33,15 +34,30 @@ Public Interface ILogin
 	Function Login() As Task(Of Boolean)
 
 	''' <summary>
+	''' Mendapatkan apakah memiliki akses atau tidak.
+	''' </summary>
+	''' <param name="Access">Nomor Akses</param>
+	''' <returns>Keputusan kepemilikan akses.</returns>
+	Function HasAccess(Access As Access) As Task(Of Boolean)
+
+	''' <summary>
+	''' Mendapatkan apakah memiliki akses atau tidak.
+	''' </summary>
+	''' <remarks>HANYA UNTUK LEBIH DARI 1 AKSES SAJA</remarks>
+	''' <param name="Access">Untuk Nomor akses lebih dari 1</param>
+	''' <returns>Keputusan kepemilikan akses.</returns>
+	Function HasAccess(ParamArray Access() As Access) As Task(Of Boolean)
+
+	''' <summary>
+	''' Mendapatkan keputusan apakah memiliki akses atau tidak.
+	''' </summary>
+	''' <param name="Access">Nomor Akses dimulai dari 1</param>
+	''' <returns>Keputusan kepemilikan akses.</returns>
+	Function HasAccess(Access As Integer) As Task(Of Boolean)
+
+	''' <summary>
 	''' Mendapatkan hak akses user. Harus jalanin dulu fungsi login.
 	''' </summary>
 	''' <returns>Mendapatkan kolom 'Akses'</returns>
 	Function GetAccess() As Task(Of Integer)
-
-	''' <summary>
-	''' Punya akses ga untuk ngakses aksi yang ditunjukan nomor. Tanya ke Bayu nanti.
-	''' </summary>
-	''' <param name="Code">Kode pada list</param>
-	''' <returns>Menghasilkan keadaan bisa akses ga</returns>
-	Function HasAccess(ByVal Code As Integer) As Task(Of Boolean)
 End Interface

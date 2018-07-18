@@ -4,5 +4,5 @@
 ''' Interface yang menangani dialog yang muncul.
 ''' </summary>
 Public Interface IDialog
-	Inherits IJsDialogHandler, IJsDialogCallback
+	Inherits IJsDialogHandler
 End Interface

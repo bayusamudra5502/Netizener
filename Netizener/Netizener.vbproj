@@ -144,9 +144,22 @@
     <Compile Include="Account\Account.xaml.vb">
       <DependentUpon>Account.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Account\Login.vb" />
+    <Compile Include="Account\Register.vb" />
+    <Compile Include="Account\Session.vb" />
+    <Compile Include="Bookmark\Bookmark.vb" />
     <Compile Include="Bookmark\FrmBookmark.xaml.vb">
       <DependentUpon>FrmBookmark.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Browser\BrowserTmp.xaml.vb">
+      <DependentUpon>BrowserTmp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Configuration\Module.vb" />
+    <Compile Include="System\LoadHandler.vb" />
+    <None Include="Configuration\Examples\Configuration.vb" />
+    <None Include="Configuration\Examples\Search Engine.vb" />
+    <None Include="Configuration\Examples\Theme.vb" />
+    <Compile Include="Download\Download.vb" />
     <Compile Include="Download\Download.xaml.vb">
       <DependentUpon>Download.xaml</DependentUpon>
     </Compile>
@@ -156,7 +169,11 @@
     <Compile Include="About\Contributor.xaml.vb">
       <DependentUpon>Contributor.xaml</DependentUpon>
     </Compile>
-    <Compile Include="System\Settings\Settings.xaml.vb">
+    <Compile Include="Download\Downloader.vb" />
+    <Compile Include="Download\DownloadViewer.xaml.vb">
+      <DependentUpon>DownloadViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Settings.xaml.vb">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
     <Page Include="About\About.xaml">
@@ -179,11 +196,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Browser\BrowserTmp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Download\Download.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Download\Downloader.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Download\DownloadViewer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -199,7 +224,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="System\Settings\Settings.xaml">
+    <Page Include="Settings\Settings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -235,7 +260,7 @@
     <Compile Include="Interfaces\IErrorHandler.vb" />
     <Compile Include="Interfaces\ILogin.vb" />
     <Compile Include="Interfaces\IRegister.vb" />
-    <Compile Include="Interfaces\IVariable.vb" />
+    <Compile Include="Interfaces\ISession.vb" />
     <Compile Include="My Project\AssemblyInfo.vb">
       <SubType>Code</SubType>
     </Compile>
@@ -261,6 +286,10 @@
     <None Include="database.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Handler\inc\bootstrap.min.css.map">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Handler\inc\license\license.pdf" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
@@ -281,6 +310,7 @@
     <Resource Include="Resources\Entypo-license.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Default.thm" />
     <None Include="TODO.md" />
   </ItemGroup>
   <ItemGroup>
@@ -303,6 +333,133 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\boy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\left-arrow.png" />
+    <Resource Include="Resources\menu.png" />
+    <Resource Include="Resources\right-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\http.png" />
+    <Resource Include="Resources\left-arrow-disable.png" />
+    <Resource Include="Resources\left-arrow-enable.png" />
+    <Resource Include="Resources\refresh.png" />
+    <Resource Include="Resources\right-arrow-disable.png" />
+    <Resource Include="Resources\right-arrow-enable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ftp.png" />
+    <Resource Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\https.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Handler\10.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\100.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\101.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\102.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\103.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\104.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\105.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\106.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\107.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\108.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\109.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\118.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\15.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\19.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\6.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\7.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\8.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\9.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\inc\001-cable.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\inc\001-plug.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\inc\002-bug.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\inc\002-wifi.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\inc\003-lock.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\inc\004-search.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\inc\005-error.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\inc\006-island.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\inc\007-alarm-clock.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Handler\inc\backup.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="Handler\inc\bootstrap.min.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\inc\bootstrap.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\inc\cruise.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\inc\jquery-3.3.1.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\inc\no-entry.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\inc\plug.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

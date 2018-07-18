@@ -52,4 +52,24 @@ Public Interface IDatabase(Of T)
 	''' <param name="Query">Perintah SQL yang dimaksud</param>
 	''' <returns>Menghasilkan True jika berhasil.</returns>
 	Function RunQuery(ByVal Query As String) As Task(Of Boolean)
+
+	''' <summary>
+	''' Fungsi mencari kolom yang dimaksud.
+	''' </summary>
+	''' <param name="TableName">Nama Tabel yang mau dicari</param>
+	''' <param name="ResultColumn">Kolom hasil yang dikehendaki</param>
+	''' <param name="Criteria">Kriteria Pencarian</param>
+	''' <returns>Dataset Kolom Hasil</returns>
+	Function FindColumn(ByVal TableName As String,
+						ByVal ResultColumn As String, ParamArray Criteria() As Criteria) As Task(Of DataSet)
+
+	''' <summary>
+	''' Fungsi mencari kolom yang memenuhi kriteria.
+	''' </summary>
+	''' <param name="TableName">Nama Tabel yang mau dicari</param>
+	''' <param name="ResultColumns">Kolom hasil yang dikehendaki</param>
+	''' <param name="Criteria">Kriteria Pencarian</param>
+	''' <returns>Dataset Kolom Hasil</returns>
+	Function FindColums(ByVal TableName As String, ByVal ResultColumns() As String,
+						ParamArray Criteria() As Criteria) As Task(Of DataSet)
 End Interface

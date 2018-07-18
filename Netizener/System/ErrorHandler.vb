@@ -10,7 +10,7 @@ Public Class ErrorHandler
 
 		Dim APPDATA As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
 		Directory.CreateDirectory(Path.Combine(APPDATA, "Netizener"))
-		SavePathInAppData = Path.Combine(APPDATA, "Netizener", Now() & ".log")
+		SavePathInAppData = Path.Combine(APPDATA, "Netizener", "Log", Now().ToString("dd-MM-yyyy.hh.mm.ss") & ".log")
 	End Sub
 
 	Public Sub New(Exception As Exception)
@@ -19,7 +19,7 @@ Public Class ErrorHandler
 
 		Dim APPDATA As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
 		Directory.CreateDirectory(Path.Combine(APPDATA, "Netizener"))
-		SavePathInAppData = Path.Combine(APPDATA, "Netizener", Now() & ".log")
+		SavePathInAppData = Path.Combine(APPDATA, "Netizener", "Log", Now().ToString("dd-MM-yyyy.hh.mm.ss") & ".log")
 	End Sub
 #End Region
 
@@ -33,7 +33,7 @@ Public Class ErrorHandler
 	Public Function SaveErrorToFileAs(Path As String) As Boolean Implements IErrorHandler.SaveErrorToFile
 		Dim hasil As Boolean = False
 		Dim Format As String = My.Resources.ErrorFormat
-		Dim ErrorMessage As String = String.Format(Format, Now.ToString("MMMM dd, yyyy"), Now.ToString("HH:mm:ss"), ErrorSource.Message, ErrorSource.ToString)
+		Dim ErrorMessage As String = String.Format(Format, Now.ToString("MMMM dd, yyyy"), Now.ToString("HH:mm:ss"), My.Resources.Version, ErrorSource.Message, ErrorSource.ToString)
 
 		Try
 			File.WriteAllText(Path, ErrorMessage)
@@ -56,12 +56,14 @@ Public Class ErrorHandler
 	Public Function SaveErrorToFileAuto() As Boolean Implements IErrorHandler.SaveErrorToFileAuto
 		Dim hasil As Boolean = False
 		Dim Format As String = My.Resources.ErrorFormat
-		Dim ErrorMessage As String = String.Format(Format, Now.ToString("MMMM dd, yyyy"), Now.ToString("HH:mm:ss"), ErrorSource.Message, ErrorSource.ToString)
+		Dim ErrorMessage As String = String.Format(Format, Now.ToString("MMMM dd, yyyy"), Now.ToString("HH:mm:ss"), My.Resources.Version, ErrorSource.Message, ErrorSource.ToString)
 
 		Try
 			File.WriteAllText(SavePathInAppData, ErrorMessage)
 			hasil = True
 		Catch ex As Exception
+			Dim err As New ErrorHandler(ex)
+			err.ShowErrorAsDialogCustom("Error While Saving Log File.", vbCritical, "Error", False, True)
 		End Try
 
 		Return hasil

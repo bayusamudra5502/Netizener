@@ -61,6 +61,35 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Data Source=database.db;version=3;.
+        '''</summary>
+        Friend ReadOnly Property ConnectionString() As String
+            Get
+                Return ResourceManager.GetString("ConnectionString", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property Database() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Database", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property DefaultTheme() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("DefaultTheme", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Error Message Description
         '''
         '''// Sabar ini ujian bro.. :v
@@ -120,6 +149,15 @@ Namespace My.Resources
         Friend ReadOnly Property MessageFormat() As String
             Get
                 Return ResourceManager.GetString("MessageFormat", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to 1.0.
+        '''</summary>
+        Friend ReadOnly Property Version() As String
+            Get
+                Return ResourceManager.GetString("Version", resourceCulture)
             End Get
         End Property
     End Module

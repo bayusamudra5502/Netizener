@@ -1,3 +1,3 @@
-﻿Public Class Downloader
+﻿Public Class FrmDownloader
 
 End Class

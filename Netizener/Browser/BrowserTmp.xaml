@@ -1,0 +1,78 @@
+﻿<Window x:Class="BrowserTmp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:CEFSharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:Netizeners"
+        mc:Ignorable="d"
+        Title="New Tab">
+    <DockPanel>
+        <StackPanel Background="WhiteSmoke" DockPanel.Dock="Top" Height="55" Orientation="Horizontal">
+            <Button Name="Back" Style="{DynamicResource MetroCircleButtonStyle}" BorderThickness="0"  HorizontalAlignment="Left" Height="50" Margin="-1,2,0,0" VerticalAlignment="Top" Width="50" ToolTip="Go Back" Click="Button_Click">
+                <Rectangle Height="30" Width="30">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="pack://application:,,,/Resources/left-arrow-disable.png"></ImageBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </Button>
+            <Button Name="Forward" Style="{DynamicResource MetroCircleButtonStyle}" BorderThickness="0"  HorizontalAlignment="Left" Height="45" Margin="0,6,0,-1" VerticalAlignment="Top" Width="45" ToolTip="Go Forward" Click="Button_Click_1">
+                <Rectangle Name="IconForward" Height="25" Width="25">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="pack://application:,,,/Resources/right-arrow-disable.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </Button>
+            <Button Name="Refresh" Background="Transparent" BorderThickness="0" Margin="0,2,0,0"  HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" ToolTip="Refresh" Click="Refresh_Click">
+                <Rectangle Name="RefreshIcon" Height="32" Width="32">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="pack://application:,,,/Resources/Refresh.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </Button>
+            <Button Name="Menu" Background="Transparent" BorderThickness="0" Margin="0,2,0,0"  HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" ToolTip="Open Settings">
+                <Rectangle Height="32" Width="32">
+                    <Rectangle.Fill>
+                        <ImageBrush  ImageSource="pack://application:,,,/Resources/menu.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Button.ContextMenu>
+                    <ContextMenu Name="ContextMenu" PlacementRectangle="{Binding RelativeSource={RelativeSource Self}}">
+                        <MenuItem Header="Add Bookmark"></MenuItem>
+                        <MenuItem Header="Downloads"></MenuItem>
+                        <MenuItem Header="Open Settings"></MenuItem>
+                    </ContextMenu>
+                </Button.ContextMenu>
+
+                <Button.Triggers>
+                    <EventTrigger SourceName="Menu" RoutedEvent="Button.Click">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContextMenu" Storyboard.TargetProperty="(ContextMenu.IsOpen)">
+                                    <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                        <DiscreteObjectKeyFrame.Value>
+                                            <sys:Boolean>True</sys:Boolean>
+                                        </DiscreteObjectKeyFrame.Value>
+                                    </DiscreteObjectKeyFrame>
+                                </ObjectAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Button.Triggers>
+            </Button>
+            <Border BorderBrush="Black"
+                    BorderThickness="1"
+                    VerticalAlignment="Center"
+                    CornerRadius="3"
+                    Background="White">
+                <StackPanel Margin="5" Orientation="Horizontal">
+                    <Image Name="BarIcon" Source="pack://application:,,,/Resources/search.png" Margin="2.5,2.5,0,2.5" Height="22" Width="22"/>
+                    <TextBox MouseDown="Border_MouseDown" Background="Transparent" KeyDown="TextBox_KeyDown" Name="URL" Grid.ColumnSpan="2" BorderThickness="0" Margin="3,0,0,0" MinWidth="500" MaxWidth="800"></TextBox>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+        <CEFSharp:ChromiumWebBrowser Name="Browser" Loaded="Browser_Loaded" LoadError="Browser_LoadError" LoadingStateChanged="Browser_LoadingStateChanged" FrameLoadEnd="Browser_FrameLoadEnd">
+        </CEFSharp:ChromiumWebBrowser>
+    </DockPanel>
+</Window>
